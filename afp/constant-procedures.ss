@@ -1,7 +1,7 @@
 (library (afp constant-procedures)
 	 (export constant values? create black-hole)
-	 (import (rename (rnrs) (expt rnrs-expt))
-		 (afp primitives))
+	 (import (rnrs)
+		 (only (afp primitives) delist))
 	 
 	 (define (constant . fixed-values)
 	   (lambda ignored

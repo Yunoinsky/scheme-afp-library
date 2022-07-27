@@ -2,8 +2,8 @@
 	 (export arithmetic-mean lesser factorial terminal double greater geo? halve 
 		 greatest-odd-divisor reverse-digits
 		 power-of-two add1 sub1)
-	 (import (rename (rnrs) (expt rnrs-expt)) 
-		 (afp primitives))
+	 (import (rnrs)
+		 (only (afp primitives) receive sect <>)) 
 
 	 (define (arithmetic-mean a b)
 	   (/ (+ a b) 2))
