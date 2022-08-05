@@ -21,7 +21,8 @@
 	   (syntax-rules ()
 	     ((receive formals expression body ...)
 	      (call-with-values (lambda () expression)
-				(lambda formals body ...)))))
+				  (lambda formals body ...)))))
+   
 	 (define-syntax rec
 	   (syntax-rules ()
 	     ((rec (name . variables) . body)

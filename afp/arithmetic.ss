@@ -2,6 +2,7 @@
 	 (export arithmetic-mean lesser factorial terminal double greater geo? halve 
 		 greatest-odd-divisor reverse-digits
 		 power-of-two add1 sub1)
+   
 	 (import (rnrs)
 		 (only (afp primitives) receive sect <>)) 
 
