@@ -3,9 +3,10 @@
 
 (library (afp coupler)
   (export compose pipe cross dispatch)
-	(import (rename (rnrs) (expt rnrs-expt))
-		      (afp primitives)
-          (afp procedure-sections))
+	(import (rnrs)
+		      (only (afp primitives) delist receive sect <>)
+          (only (afp procedure-sections) invoke))
+
 	(define (compose outer inner)
 	  (lambda arguments
 	    (receive intermediates (apply inner arguments)
@@ -21,6 +22,5 @@
 
   (define (dispatch . procedures)
     (lambda arguments
-      (delist (map (sect apply <> arguments) procedures))))
-  )
+      (delist (map (sect apply <> arguments) procedures)))))
 

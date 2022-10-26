@@ -3,7 +3,6 @@
 	 (import (rename (rnrs) (expt rnrs-expt))
 		 (only (chezscheme) syntax-error))
 
-
 	 (define (delist ls)
 	   (apply values ls))
 
